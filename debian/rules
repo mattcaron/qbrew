@@ -1,0 +1,41 @@
+#!/usr/bin/make -f
+
+# This target creates the pixmaps used for the menu
+# It requires sodipodi and mogrify to be installed
+generate-xpm:
+	sodipodi --without-gui --export-area=10.56:104.84:182.27:276.56 \
+		--export-height=16  --file=pics/qbrew.svg \
+		--export-png=debian/qbrew_16x16.png
+	sodipodi --without-gui --export-area=10.56:104.84:182.27:276.56 \
+		--export-height=32  --file=pics/qbrew.svg \
+		--export-png=debian/qbrew_32x32.png
+	mogrify -format xpm debian/qbrew_16x16.png
+	mogrify -format xpm debian/qbrew_32x32.png
+	rm -f debian/qbrew_16x16.png debian/qbrew_32x32.png
+
+build: build-stamp
+build-stamp:
+	dh build --before configure
+	LDFLAGS="-Wl,--as-needed $(LDFLAGS)" ./configure --debug --prefix=/usr
+	dh build --after configure
+	touch $@
+
+clean:
+	dh clean
+
+install: build
+	dh install --before auto_install
+	$(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/qbrew
+	install -m 0644 debian/qbrew_16x16.xpm $(CURDIR)/debian/qbrew/usr/share/pixmaps
+	install -m 0644 debian/qbrew_32x32.xpm $(CURDIR)/debian/qbrew/usr/share/pixmaps
+	dh install --after auto_install
+
+binary-indep: install
+	dh binary-indep
+
+binary-arch: install
+	dh binary-arch
+
+binary: binary-indep binary-arch
+
+.PHONY: build clean binary-indep binary-arch binary install
