@@ -87,7 +87,7 @@ unix:!macx {
     INSTALLS += target trans data
 }
 
-RESOURCES = qbrew.qrc
+RESOURCES = pics/pics.qrc
 
 HEADERS = alcoholtool.h \
 	beerxmlreader.h \
