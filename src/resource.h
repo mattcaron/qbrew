@@ -57,7 +57,7 @@ const QByteArray TITLE        = "QBrew";
 const QByteArray DESCRIPTION  = QT_TRANSLATE_NOOP("description",
                                 "A Homebrewer's Recipe Calculator");
 const QByteArray COPYRIGHT    = QT_TRANSLATE_NOOP("copyright",
-                                "Copyright 1999-2008");
+                                "Copyright 1999-2009");
 const QByteArray AUTHOR       = "David Johnson";
 const QByteArray AUTHOR_EMAIL = "david@usermode.org";
 const QByteArray CONTRIBUTORS = "Lee Henderson, "
