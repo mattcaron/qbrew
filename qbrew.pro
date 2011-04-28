@@ -118,6 +118,7 @@ HEADERS = alcoholtool.h \
 	style.h \
 	styledelegate.h \
 	stylemodel.h \
+        sugartool.h \
 	textprinter.h \
 	view.h
 
@@ -150,6 +151,7 @@ SOURCES = alcoholtool.cpp \
 	style.cpp \
 	styledelegate.cpp \
 	stylemodel.cpp \
+        sugartool.cpp \
 	textprinter.cpp \
 	view.cpp
 
@@ -164,6 +166,7 @@ FORMS = alcoholtool.ui \
 	mashwatertool.ui \
 	noteview.ui \
 	recipeconfig.ui \
+        sugartool.ui \
 	view.ui
 
 TRANSLATIONS = translations/qbrew_de.ts
