@@ -66,7 +66,7 @@ const QByteArray CONTRIBUTORS = "Lee Henderson, "
                                 "Stephen Lowrie, "
                                 "Michal Palczewski, "
                                 "Kevin Pullin, "
-                                "Tobias Quathamer";
+                                "Tobias Toedter";
 
 const QByteArray READY        = QT_TRANSLATE_NOOP("message",
                                 "Ready");
@@ -103,8 +103,8 @@ const QByteArray EXPORT_FILTER   = QT_TRANSLATE_NOOP("file filter",
                                    + TEXT_FILTER);
 
 const QByteArray DATA_FILE       = "qbrewdata";
-const QByteArray HELP_FILE       = "book/handbook-index.html";
-const QByteArray PRIMER_FILE     = "primer/primer.html";
+const QByteArray HELP_FILE       = "handbook-index.html";
+const QByteArray PRIMER_FILE     = "primer.html";
 const QByteArray DEFAULT_FILE    = QT_TRANSLATE_NOOP("file name", "untitled");
 
 // previous valid data formats
