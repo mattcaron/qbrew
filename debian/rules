@@ -13,29 +13,16 @@ generate-xpm:
 	mogrify -format xpm debian/qbrew_32x32.png
 	rm -f debian/qbrew_16x16.png debian/qbrew_32x32.png
 
-build: build-stamp
-build-stamp:
-	dh build --before configure
+%:
+	dh $@
+
+# dh_auto_configure does not work with this package, thus
+# we need to call the configure script manually.
+override_dh_auto_configure:
 	LDFLAGS="-Wl,--as-needed $(LDFLAGS)" ./configure --debug --prefix=/usr
-	dh build --after configure
-	touch $@
 
-clean:
-	dh clean
-
-install: build
-	dh install --before auto_install
-	$(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/qbrew
+# Install the two pixmaps for the menu
+override_dh_auto_install:
+	dh_auto_install
 	install -m 0644 debian/qbrew_16x16.xpm $(CURDIR)/debian/qbrew/usr/share/pixmaps
 	install -m 0644 debian/qbrew_32x32.xpm $(CURDIR)/debian/qbrew/usr/share/pixmaps
-	dh install --after auto_install
-
-binary-indep: install
-	dh binary-indep
-
-binary-arch: install
-	dh binary-arch
-
-binary: binary-indep binary-arch
-
-.PHONY: build clean binary-indep binary-arch binary install
