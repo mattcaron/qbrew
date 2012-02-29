@@ -2,3 +2,4 @@
 0002-Correct-search-paths-for-documentation.patch
 0003-Add-CXXFLAGS-and-LDFLAGS-to-configure.patch
 0004-Adjust-installation-and-cleanup-routines.patch
+0005-Update-German-translation.patch
