@@ -1,3 +1,19 @@
+qbrew (0.4.1-3) unstable; urgency=low
+
+  * Convert to source format 3.0 (quilt)
+  * Use debian/patches for upstream changes
+  * Update German translation of program
+  * Use machine-readable copyright format v1.0
+  * Switch to debhelper v9
+  * Reduce debian/rules for debhelper v9
+  * Remove dh-make comments from debian/rules
+  * Remove versioned dependency of libqt4-dev (Qt 4.3 is long gone now)
+  * Create and install a .desktop file for qbrew
+  * Add lrelease to configuration step
+  * Update to Standards-Version 3.9.3
+
+ -- Tobias Quathamer <toddy@debian.org>  Fri, 02 Mar 2012 00:12:29 +0100
+
 qbrew (0.4.1-2) unstable; urgency=low
 
   * Change maintainer name
