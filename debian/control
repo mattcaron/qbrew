@@ -3,7 +3,7 @@ Section: x11
 Priority: extra
 Maintainer: Tobias Quathamer <toddy@debian.org>
 Build-Depends: debhelper (>= 9), libqt4-dev
-Standards-Version: 3.9.3
+Standards-Version: 3.9.6
 Homepage: http://www.usermode.org/code.html
 
 Package: qbrew
