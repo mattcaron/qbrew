@@ -3,14 +3,14 @@ Date: Wed, 29 Feb 2012 14:27:31 +0100
 Subject: Change last name after marriage
 
 ---
- AUTHORS                         |    2 +-
- docs/book/handbook-credits.html |    2 +-
- docs/handbook.docbook           |    2 +-
- src/resource.h                  |    2 +-
+ AUTHORS                         | 2 +-
+ docs/book/handbook-credits.html | 2 +-
+ docs/handbook.docbook           | 2 +-
+ src/resource.h                  | 2 +-
  4 files changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/AUTHORS b/AUTHORS
-index 4274883..ce65898 100644
+index 4274883..ee2ea9c 100644
 --- a/AUTHORS
 +++ b/AUTHORS
 @@ -23,4 +23,4 @@ The KDE Project <www.kde.org>
@@ -20,7 +20,7 @@ index 4274883..ce65898 100644
 -Tobias Toedter <t.toedter@gmx.net>
 +Dr. Tobias Quathamer <toddy@debian.org>
 diff --git a/docs/book/handbook-credits.html b/docs/book/handbook-credits.html
-index 7093f9c..b9277fc 100644
+index 7093f9c..31e599c 100644
 --- a/docs/book/handbook-credits.html
 +++ b/docs/book/handbook-credits.html
 @@ -98,7 +98,7 @@
@@ -33,7 +33,7 @@ index 7093f9c..b9277fc 100644
              </li>
              <li>
 diff --git a/docs/handbook.docbook b/docs/handbook.docbook
-index d8715d3..cc538dd 100644
+index d8715d3..2bd5d00 100644
 --- a/docs/handbook.docbook
 +++ b/docs/handbook.docbook
 @@ -571,7 +571,7 @@
@@ -46,7 +46,7 @@ index d8715d3..cc538dd 100644
          <listitem>
            <para>...Stephen Lowrie for a lot of rote work with
 diff --git a/src/resource.h b/src/resource.h
-index 6480fa3..90a4dc1 100644
+index 6480fa3..c618bbd 100644
 --- a/src/resource.h
 +++ b/src/resource.h
 @@ -66,7 +66,7 @@ const QByteArray CONTRIBUTORS = "Lee Henderson, "
@@ -58,4 +58,3 @@ index 6480fa3..90a4dc1 100644
  
  const QByteArray READY        = QT_TRANSLATE_NOOP("message",
                                  "Ready");
--- 

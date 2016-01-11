@@ -3,11 +3,11 @@ Date: Wed, 29 Feb 2012 14:29:05 +0100
 Subject: Correct search paths for documentation
 
 ---
- src/resource.h |    4 ++--
- 1 files changed, 2 insertions(+), 2 deletions(-)
+ src/resource.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/src/resource.h b/src/resource.h
-index 90a4dc1..f4949d7 100644
+index c618bbd..98e76cb 100644
 --- a/src/resource.h
 +++ b/src/resource.h
 @@ -103,8 +103,8 @@ const QByteArray EXPORT_FILTER   = QT_TRANSLATE_NOOP("file filter",
@@ -21,4 +21,3 @@ index 90a4dc1..f4949d7 100644
  const QByteArray DEFAULT_FILE    = QT_TRANSLATE_NOOP("file name", "untitled");
  
  // previous valid data formats
--- 

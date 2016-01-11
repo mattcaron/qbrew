@@ -3,8 +3,8 @@ Date: Thu, 1 Mar 2012 23:44:06 +0100
 Subject: Add lrelease to configuration step
 
 ---
- configure |   26 +++++++++++++++++++++++++-
- 1 files changed, 25 insertions(+), 1 deletions(-)
+ configure | 26 +++++++++++++++++++++++++-
+ 1 file changed, 25 insertions(+), 1 deletion(-)
 
 diff --git a/configure b/configure
 index 4e5d099..32bad2d 100755
@@ -90,4 +90,3 @@ index 4e5d099..32bad2d 100755
 -echo
 \ No newline at end of file
 +echo
--- 

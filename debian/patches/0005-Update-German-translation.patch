@@ -3,8 +3,8 @@ Date: Wed, 29 Feb 2012 14:41:37 +0100
 Subject: Update German translation
 
 ---
- translations/qbrew_de.ts |  563 +++++++++++++++++++++++-----------------------
- 1 files changed, 281 insertions(+), 282 deletions(-)
+ translations/qbrew_de.ts | 563 +++++++++++++++++++++++------------------------
+ 1 file changed, 281 insertions(+), 282 deletions(-)
 
 diff --git a/translations/qbrew_de.ts b/translations/qbrew_de.ts
 index 7d0f950..43c1301 100644
@@ -1467,4 +1467,3 @@ index 7d0f950..43c1301 100644
      </message>
  </context>
  </TS>
--- 
