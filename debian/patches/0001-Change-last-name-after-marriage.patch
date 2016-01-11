@@ -1,4 +1,4 @@
-From: Tobias Quathamer <toddy@debian.org>
+From: "Dr. Tobias Quathamer" <toddy@debian.org>
 Date: Wed, 29 Feb 2012 14:27:31 +0100
 Subject: Change last name after marriage
 
@@ -18,7 +18,7 @@ index 4274883..ce65898 100644
  Translators
  -----------
 -Tobias Toedter <t.toedter@gmx.net>
-+Tobias Quathamer <toddy@debian.org>
++Dr. Tobias Quathamer <toddy@debian.org>
 diff --git a/docs/book/handbook-credits.html b/docs/book/handbook-credits.html
 index 7093f9c..b9277fc 100644
 --- a/docs/book/handbook-credits.html
@@ -28,7 +28,7 @@ index 7093f9c..b9277fc 100644
              <li>
                <p>
 -                ...Tobias Toedter for German translation work.
-+                ...Tobias Quathamer for German translation work.
++                ...Dr. Tobias Quathamer for German translation work.
                </p>
              </li>
              <li>
@@ -41,7 +41,7 @@ index d8715d3..cc538dd 100644
          </listitem>
          <listitem>
 -          <para>...Tobias Toedter for German translation work.</para>
-+          <para>...Tobias Quathamer for German translation work.</para>
++          <para>...Dr. Tobias Quathamer for German translation work.</para>
          </listitem>
          <listitem>
            <para>...Stephen Lowrie for a lot of rote work with
@@ -54,7 +54,7 @@ index 6480fa3..90a4dc1 100644
                                  "Michal Palczewski, "
                                  "Kevin Pullin, "
 -                                "Tobias Toedter";
-+                                "Tobias Quathamer";
++                                "Dr. Tobias Quathamer";
  
  const QByteArray READY        = QT_TRANSLATE_NOOP("message",
                                  "Ready");
