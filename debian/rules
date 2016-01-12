@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
 
+export QT_SELECT=qt5
+
 # This target creates the pixmaps used for the menu
 # It requires sodipodi and mogrify to be installed
 generate-xpm:
