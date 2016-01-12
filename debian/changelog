@@ -1,3 +1,14 @@
+qbrew (0.4.1-4) unstable; urgency=medium
+
+  * Use Qt5 for building the package
+  * New patch: 0007-Update-code-to-work-with-Qt5
+  * Update d/copyright
+  * Update Standards-Version to 3.9.6, no changes needed
+  * Update maintainer name
+  * Add git repository location to d/control
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Tue, 12 Jan 2016 17:12:52 +0100
+
 qbrew (0.4.1-3) unstable; urgency=low
 
   * Convert to source format 3.0 (quilt)
