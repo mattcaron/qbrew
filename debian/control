@@ -5,6 +5,8 @@ Maintainer: Dr. Tobias Quathamer <toddy@debian.org>
 Build-Depends: debhelper (>= 9), qt5-default, qttools5-dev-tools
 Standards-Version: 3.9.6
 Homepage: http://www.usermode.org/code.html
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=users/toddy/debian/qbrew.git;a=summary
+Vcs-Git: git://anonscm.debian.org/users/toddy/debian/qbrew.git
 
 Package: qbrew
 Architecture: any
