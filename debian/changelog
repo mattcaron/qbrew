@@ -1,3 +1,10 @@
+qbrew (0.4.1-5) unstable; urgency=medium
+
+  * Use qtbase5-dev instead of meta package for building
+  * Remove d/menu and use only .desktop file
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Fri, 15 Jan 2016 21:36:07 +0100
+
 qbrew (0.4.1-4) unstable; urgency=medium
 
   * Use Qt5 for building the package
