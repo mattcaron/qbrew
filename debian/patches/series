@@ -5,3 +5,4 @@
 0005-Update-German-translation.patch
 0006-Add-lrelease-to-configuration-step.patch
 0007-Update-code-to-work-with-Qt5.patch
+0008-Fix-FTBFS-with-GCC-6.patch

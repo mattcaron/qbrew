@@ -1,0 +1,23 @@
+From: "Dr. Tobias Quathamer" <toddy@debian.org>
+Date: Tue, 2 Feb 2016 12:11:05 +0100
+Subject: Fix FTBFS with GCC 6
+
+---
+ src/beerxmlreader.cpp | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/src/beerxmlreader.cpp b/src/beerxmlreader.cpp
+index 9580f93..fb363b2 100644
+--- a/src/beerxmlreader.cpp
++++ b/src/beerxmlreader.cpp
+@@ -254,7 +254,9 @@ Recipe BeerXmlReader::readSingleRecipe()
+     }
+     if (hasError()) {
+         raiseError("Problem reading recipe");
+-        return false;
++        // Ensure an empty title, so that the recipe does not get included
++        recipe.setTitle("");
++        return recipe;
+     }
+ 
+     // set grain use according to recipe type
