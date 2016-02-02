@@ -8,3 +8,5 @@ TryExec=qbrew
 Exec=qbrew
 Icon=qbrew
 Categories=Utility;Qt;
+Keywords=beer;brewing;recipe;calculator;
+Keywords[de]=Bier;Brauen;Rezept;Rechner;
