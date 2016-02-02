@@ -1,3 +1,14 @@
+qbrew (0.4.1-6) unstable; urgency=medium
+
+  * Add all hardening build flags
+  * Fix FTBFS with GCC 6.
+    Thanks to Martin Michlmayr <tbm@hpe.com> (Closes: #811681)
+  * Use DEB_LDFLAGS_MAINT_APPEND in d/rules
+  * Update Vcs-* URLS
+  * Add keywords to qbrew.desktop
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Tue, 02 Feb 2016 12:36:14 +0100
+
 qbrew (0.4.1-5) unstable; urgency=medium
 
   * Use qtbase5-dev instead of meta package for building
