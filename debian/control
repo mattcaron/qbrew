@@ -3,7 +3,7 @@ Section: x11
 Priority: extra
 Maintainer: Dr. Tobias Quathamer <toddy@debian.org>
 Build-Depends: debhelper (>= 10), qtbase5-dev, qttools5-dev-tools
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Homepage: http://www.usermode.org/code.html
 Vcs-Browser: https://anonscm.debian.org/cgit/users/toddy/debian/qbrew.git
 Vcs-Git: https://anonscm.debian.org/git/users/toddy/debian/qbrew.git
