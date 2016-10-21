@@ -1,3 +1,12 @@
+qbrew (0.4.1-7) unstable; urgency=medium
+
+  * Fix FTBFS due to wrong detection of buildsystem by debhelper
+    (Closes: #840732)
+  * Use debhelper v10
+  * Update to Standards-Version 3.9.8, no changes needed
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Fri, 21 Oct 2016 17:24:40 +0200
+
 qbrew (0.4.1-6) unstable; urgency=medium
 
   * Add all hardening build flags
