@@ -15,7 +15,12 @@ override_dh_auto_configure:
 	./configure --debug --prefix=/usr
 
 # Install two icons for desktop file
+# Important: Specify the buildsystem for dh_auto_install as "qmake",
+# otherwise debhelper assumes autoconf and will not set the variable
+# INSTALL_ROOT for qmake, only DESTDIR for the Makefile.
+# The build will fail because the installation then uses the system
+# directories. See bug #840732.
 override_dh_auto_install:
-	dh_auto_install
+	dh_auto_install --buildsystem=qmake
 	install -m 0644 pics/qbrew.png $(CURDIR)/debian/qbrew/usr/share/icons/hicolor/48x48/apps
 	install -m 0644 pics/qbrew.svg $(CURDIR)/debian/qbrew/usr/share/icons/hicolor/scalable/apps
