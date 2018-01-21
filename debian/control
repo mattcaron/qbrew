@@ -7,6 +7,7 @@ Standards-Version: 3.9.8
 Homepage: http://www.usermode.org/code.html
 Vcs-Browser: https://anonscm.debian.org/cgit/users/toddy/debian/qbrew.git
 Vcs-Git: https://anonscm.debian.org/git/users/toddy/debian/qbrew.git
+Testsuite: autopkgtest
 
 Package: qbrew
 Architecture: any
