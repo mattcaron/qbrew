@@ -67,7 +67,8 @@ const QByteArray CONTRIBUTORS = "Lee Henderson, "
                                 "Stephen Lowrie, "
                                 "Michal Palczewski, "
                                 "Kevin Pullin, "
-                                "Dr. Tobias Quathamer";
+                                "Dr. Tobias Quathamer, "
+                                "Matthew Caron, ";
 
 const QByteArray READY        = QT_TRANSLATE_NOOP("message",
                                 "Ready");

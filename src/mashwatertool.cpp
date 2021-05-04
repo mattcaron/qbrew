@@ -1,7 +1,8 @@
 // mashwaterdialog.cpp
 // a single infusion or multi-step mash calculator for QBrew
 //
-// Copyright (c) 2008, Timothy Howe <timh at dirtymonday dot net>
+// Copyright (c) 2008, Timothy Howe <timh at dirtymonday dot net>, modified by 
+// Matthew Caron <matt@mattcaron.net>.
 //
 // Permission to use, copy, modify, and/or distribute this software for any
 // purpose with or without fee is hereby granted, provided that the above
