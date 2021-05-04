@@ -1,0 +1,7 @@
+Makefile
+build/
+config.log
+qbrew
+.qmake.cache
+.qmake.stash
+translations/qbrew_de.qm
