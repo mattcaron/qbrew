@@ -7,6 +7,8 @@ TARGET = qbrew
 TEMPLATE = app
 CONFIG += qt warn_on
 
+QT += widgets printsupport
+
 MOC_DIR = build
 OBJECTS_DIR = build
 RCC_DIR = build
@@ -14,6 +16,8 @@ UI_DIR = build
 
 INCLUDEPATH += src
 VPATH = src
+
+QMAKE_DISTCLEAN = config.log
 
 win32 {
     RC_FILE = win\icon.rc
@@ -74,8 +78,12 @@ unix:!macx {
 
     trans.files = translations/*.qm
     data.files = data/* pics/splash.png
-    doc.files = docs/book/*.html docs/primer/*.html README LICENSE
-    INSTALLS += target trans data doc 
+    # The handbook and the primer are installed in a different
+    # location. The files README and LICENSE are copied by the
+    # dh_installdocs script
+    #doc.files = docs/book/*.html docs/primer/*.html README LICENSE
+    #INSTALLS += target trans data doc
+    INSTALLS += target trans data
 }
 
 RESOURCES = qbrew.qrc

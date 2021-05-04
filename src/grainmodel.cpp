@@ -35,10 +35,11 @@ GrainModel::~GrainModel(){}
 // flush()
 // -------
 // Reset the model
+// The reset() method is obsolete with Qt5.
 
 void GrainModel::flush()
 {
-    reset();
+//     reset();
 }
 
 //////////////////////////////////////////////////////////////////////////////

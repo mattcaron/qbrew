@@ -7,7 +7,7 @@
   Please see the header file for copyright and license information.
 ***************************************************************************/
 
-#include <QtGui>
+#include <QtWidgets>
 
 #include "alcoholtool.h"
 #include "configure.h"
@@ -73,7 +73,7 @@ void QBrew::initialize(const QString &filename)
     // setup UI
     ui.setupUi(this);
     initActions();
-#if defined (Q_WS_MAC)
+#if defined (Q_OS_MAC)
     // initial defaults for mac
     setUnifiedTitleAndToolBarOnMac(false);
     ui.maintoolbar->setVisible(false);
@@ -1248,7 +1248,7 @@ QString QBrew::dataBase()
     // TODO: can QDesktopServices help us here?
     QString base = qApp->applicationDirPath();
 
-#if defined(Q_WS_X11)
+#if defined(Q_OS_UNIX)
     if (QRegExp("qbrew/?$").indexIn(base) != -1) {
         // we have our own application directory (it ends in 'qbrew')
         base += "/";
@@ -1260,7 +1260,7 @@ QString QBrew::dataBase()
         base += "/";
     }
 
-#elif defined(Q_WS_MAC)
+#elif defined(Q_OS_MAC)
     if (QRegExp("Contents/MacOS/?$").indexIn(base) != -1) {
         // we're pointing inside an application bundle
         base += "/../Resources/";
@@ -1284,7 +1284,7 @@ QString QBrew::docBase()
 {
     QString base = qApp->applicationDirPath();
 
-#if defined(Q_WS_X11)
+#if defined(Q_OS_UNIX)
     if (QRegExp("qbrew/?$").indexIn(base) != -1) {
         // we have our own application directory (it ends in 'qbrew')
         base += "/doc/";
@@ -1296,7 +1296,7 @@ QString QBrew::docBase()
         base += "/doc/";
     }
 
-#elif defined(Q_WS_MAC)
+#elif defined(Q_OS_MAC)
     if (QRegExp("Contents/MacOS/?$").indexIn(base) != -1) {
         // we're pointing inside an application bundle
         base += "/../Resources/en.lproj/";

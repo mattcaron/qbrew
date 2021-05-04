@@ -254,7 +254,9 @@ Recipe BeerXmlReader::readSingleRecipe()
     }
     if (hasError()) {
         raiseError("Problem reading recipe");
-        return false;
+        // Ensure an empty title, so that the recipe does not get included
+        recipe.setTitle("");
+        return recipe;
     }
 
     // set grain use according to recipe type

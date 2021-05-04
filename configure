@@ -73,6 +73,10 @@ qmake_test() {
         if [ -x "$result" ] ; then
             QMAKE=$result
         fi
+        result=$QTDIR/bin/lrelease
+        if [ -x "$result" ] ; then
+            LRELEASE=$result
+        fi
     fi
 
     # check PATH
@@ -81,6 +85,10 @@ qmake_test() {
         if [ -x "$result" ] ; then
             QMAKE=$result
         fi
+        result=`which lrelease 2>/dev/null`
+        if [ -x "$result" ] ; then
+            LRELEASE=$result
+        fi
     fi
 
     # check common rename
@@ -88,6 +96,10 @@ qmake_test() {
         result=`which qmake-q4 2>/dev/null`
         if [ -x "$result" ] ; then
             QMAKE=$result
+        fi
+        result=`which lrelease-q4 2>/dev/null`
+        if [ -x "$result" ] ; then
+            LRELEASE=$result
         fi
     fi
 
@@ -98,6 +110,10 @@ qmake_test() {
             result=$result/bin/qmake
             if [ -x "$result" ] ; then
                 QMAKE=$result
+            fi
+            result=$result/bin/lrelease
+            if [ -x "$result" ] ; then
+                LRELEASE=$result
             fi
         fi
     fi
@@ -112,6 +128,7 @@ qmake_test() {
 
     echo "yes"
     echo "found qmake at $QMAKE" >> $LOGFILE
+    echo "found lrelease at $LRELEASE" >> $LOGFILE
 }
 
 qtversion_test() {
@@ -255,6 +272,7 @@ echo `date` >>$LOGFILE
 parse_options $@
 
 QMAKE=${QMAKE:-}
+LRELEASE=${LRELEASE:-}
 PREFIX=${PREFIX:-/usr/local}
 BINDIR=${BINDIR:-$PREFIX/bin}
 DATADIR=${DATADIR:-$PREFIX/share/$PACKAGE}
@@ -296,11 +314,19 @@ if [ ! -z $QMAKESPEC ] ; then
     export QMAKESPEC
 fi
 
+### create translation
+
+echo "Creating translations"
+
+$LRELEASE $PROFILE > /dev/null 2>> $LOGFILE
+
 ### create Makefile
 
 echo "Creating Makefile"
 
-$QMAKE -o $SOURCEPATH/Makefile "CONFIG+=$BUILDMODE configure" $PROFILE > /dev/null 2>> $LOGFILE
+$QMAKE "QMAKE_CXXFLAGS=\"$CXXFLAGS\"" "QMAKE_LFLAGS=\"$LDFLAGS\"" \
+    -o $SOURCEPATH/Makefile "CONFIG+=$BUILDMODE configure" \
+    $PROFILE > /dev/null 2>> $LOGFILE
 
 if [ $? != "0" ] ; then
     echo "ERROR: could not create Makefile. See config.log"

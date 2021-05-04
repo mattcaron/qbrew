@@ -31,10 +31,11 @@ HopModel::~HopModel() {}
 // flush()
 // -------
 // Reset the model
+// The reset() method is obsolete with Qt5.
 
 void HopModel::flush()
 {
-    reset();
+//     reset();
 }
 
 //////////////////////////////////////////////////////////////////////////////

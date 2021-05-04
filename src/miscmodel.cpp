@@ -31,10 +31,11 @@ MiscModel::~MiscModel() {}
 // flush()
 // -------
 // Reset the model
+// The reset() method is obsolete with Qt5.
 
 void MiscModel::flush()
 {
-    reset();
+//    reset();
 }
 
 //////////////////////////////////////////////////////////////////////////////

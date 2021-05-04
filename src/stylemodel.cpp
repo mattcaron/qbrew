@@ -31,10 +31,11 @@ StyleModel::~StyleModel(){}
 // flush()
 // -------
 // Reset the model
+// The reset() method is obsolete with Qt5.
 
 void StyleModel::flush()
 {
-    reset();
+//    reset();
 }
 
 //////////////////////////////////////////////////////////////////////////////
